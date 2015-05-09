@@ -262,9 +262,14 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2013\freetype246.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
+    <PostBuildEvent>
+      <Command>SET BUILDCONFIG=Release
+if not exist "$(SolutionDir)Libs\%BUILDCONFIG%" mkdir "$(SolutionDir)Libs\%BUILDCONFIG%"
+copy /Y "$(ProjectDir)..\..\..\objs\win64\vc2013\freetype246.lib" "$(SolutionDir)Libs\%BUILDCONFIG%\$(TargetFileName)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
     <ClCompile>
@@ -317,7 +322,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246MT.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2008\freetype246MT.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
@@ -371,7 +376,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246ST.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2008\freetype246ST.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -420,9 +425,14 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246_D.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2013\freetype246_D.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
+    <PostBuildEvent>
+      <Command>SET BUILDCONFIG=Debug
+if not exist "$(SolutionDir)Libs\%BUILDCONFIG%" mkdir "$(SolutionDir)Libs\%BUILDCONFIG%"
+copy /Y "$(ProjectDir)..\..\..\objs\win64\vc2013\freetype246_D.lib" "$(SolutionDir)Libs\%BUILDCONFIG%\$(TargetFileName)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
     <ClCompile>
@@ -470,7 +480,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246ST_D.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2008\freetype246ST_D.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
@@ -524,7 +534,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>..\..\..\objs\win32\vc2008\freetype246MT_D.lib</OutputFile>
+      <OutputFile>..\..\..\objs\win64\vc2008\freetype246MT_D.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
   </ItemDefinitionGroup>
