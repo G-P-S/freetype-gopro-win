@@ -266,9 +266,8 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <PostBuildEvent>
-      <Command>SET BUILDCONFIG=Release
-if not exist "$(SolutionDir)Libs\%BUILDCONFIG%" mkdir "$(SolutionDir)Libs\%BUILDCONFIG%"
-copy /Y "$(ProjectDir)..\..\..\objs\win64\vc2013\freetype246.lib" "$(SolutionDir)Libs\%BUILDCONFIG%\$(TargetFileName)"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
@@ -429,9 +428,8 @@ copy /Y "$(ProjectDir)..\..\..\objs\win64\vc2013\freetype246.lib" "$(SolutionDir
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <PostBuildEvent>
-      <Command>SET BUILDCONFIG=Debug
-if not exist "$(SolutionDir)Libs\%BUILDCONFIG%" mkdir "$(SolutionDir)Libs\%BUILDCONFIG%"
-copy /Y "$(ProjectDir)..\..\..\objs\win64\vc2013\freetype246_D.lib" "$(SolutionDir)Libs\%BUILDCONFIG%\$(TargetFileName)"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
